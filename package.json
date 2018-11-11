@@ -1,9 +1,8 @@
 {
-  "name": "sapience.life",
+  "name": "menshealth",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@blueprintjs/core": "^3.2.0",
     "bcryptjs": "^2.4.3",
     "concurrently": "^3.6.1",
     "cookie-parser": "^1.4.3",
@@ -37,14 +36,13 @@
     "redux-form": "^7.4.2",
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
-    "sequelize": "^4.38.0",
     "styled-components": "^4.0.3",
     "winston": "^3.0.0"
   },
   "scripts": {
     "watch-css": "npm run build-css && node-sass-chokidar ./src/styles/importer.scss ./src/styles/importer.css --watch --recursive",
     "start-js": "react-scripts start",
-    "start": "NODE_ENV=production REACT_APP_ENV_URL=http://openhedge.co node ./src/server/server.js",
+    "start": "NODE_ENV=production REACT_APP_ENV_URL=http://menshealthno.com node ./src/server/server.js",
     "start-dev-server": "REACT_APP_ENV_URL=http://localhost:8080 nodemon ./server/server.js",
     "start-dev-client": "npm-run-all -p watch-css start-js",
     "build-css": "node-sass-chokidar ./src/styles/importer.scss ./src/styles/importer.css",
@@ -55,7 +53,7 @@
     "dev": "NODE_ENV=development REACT_APP_ENV_URL=http://localhost:8080  concurrently --kill-others-on-fail \"npm run start-dev-server\" \"npm run start-dev-client\"",
     "prod": "run-s build start-dev-server"
   },
-  "description": "OpenHedges Project - 2018 | Seek Inc.",
+  "description": "MensHealth Project - 2018",
   "main": "server.js",
   "devDependencies": {
     "chai": "^4.1.2",
@@ -64,11 +62,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Swelly/OpenHedges.git"
+    "url": "git+https://github.com/raymundoxmartinez/MensHealth"
   },
-  "author": "Seek Inc.",
+  "author": "raymundoxmartinez",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Swelly/OpenHedges/issues"
+    "url": "https://github.com/raymundoxmartinez/MensHealth/issues"
   }
 }
