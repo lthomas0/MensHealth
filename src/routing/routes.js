@@ -3,15 +3,12 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 import pages from "./pages";
 
-import Layout from "../app/common/Layout";
-
 import Home from "../app/Home/Home.js";
 
 // Must construct an object out of render() function for
 // both performance and the correctness of module states, i.e. this.state.
 
 export default () => (
-	<Layout>
 		<Switch>
 			<Route exact path="/" component={Home} />
 
@@ -27,5 +24,4 @@ export default () => (
 				))}
 			<Redirect to="/" />
 		</Switch>
-	</Layout>
 );

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^3.4.0",
     "@material-ui/icons": "^3.0.1",
     "bcryptjs": "^2.4.3",
     "concurrently": "^3.6.1",
