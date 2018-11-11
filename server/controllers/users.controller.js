@@ -1,5 +1,5 @@
 const passport = require('../auth/local');
-const User = require('../models').User;;
+const User = require('../models/user');
 const usersService = require('../services/users.service')({
     modelService: User
 });
