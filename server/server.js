@@ -9,13 +9,25 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const winston = require('winston');
 const morgan = require('morgan');
+const mongoose = require('mongoose');
+const config = require('./config/config');
 require('dotenv').config();
+const devMode = process.env.NODE_ENV !== 'production';
 const sessionStore = process.env.SESSION_STORE;
 const port = process.env.PORT || 8080;
 
 // Configurations
 // ================================================================================================
 const app = express();
+
+
+// Set up Mongoose with centralized promise
+mongoose.Promise = global.Promise;
+mongoose.connect(devMode ? config.db_dev : config.db).then(() => {
+    winston.log('info', 'Successfully connect with mongoose DB');
+}).catch((err) => {
+    winston.log('error', err);
+});
 
 // Set up middlewares
 
