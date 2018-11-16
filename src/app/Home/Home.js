@@ -15,6 +15,22 @@ import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Divider from '@material-ui/core/Divider';
 
+import BigCalendar from 'react-big-calendar'
+import moment from 'moment'
+
+const localizer = BigCalendar.momentLocalizer(moment) // or globalizeLocalizer
+
+const MyCalendar = props => (
+  <div>
+    <BigCalendar
+      localizer={localizer}
+      events={myEventsList}
+      startAccessor="start"
+      endAccessor="end"
+    />
+  </div>
+)
+
 const styles = theme => ({
   layout: {
     width: 'auto',
@@ -124,6 +140,7 @@ function Blog(props) {
           >
             Blog
           </Typography>
+		  <MyCalendar/>
           <IconButton>
             <SearchIcon />
           </IconButton>
