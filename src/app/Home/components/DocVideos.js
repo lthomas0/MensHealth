@@ -26,6 +26,17 @@ function SimpleCard(props) {
   return (
     <Grid container spacing={40} >
       <Grid item xs={12} md={12}>
+        <Typography
+          component="h2"
+          variant="h3"
+          color="inherit"
+          align="center"
+          noWrap
+        >
+          Treatments & Conditions
+    </Typography>
+      </Grid>
+      <Grid item xs={12} md={12}>
         <Card >
           <Grid container>
             <Grid item xs={12} md={6}>

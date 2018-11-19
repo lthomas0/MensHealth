@@ -35,7 +35,8 @@ class Home extends PureComponent {
       <React.Fragment>
         <CssBaseline />
         <div className={classes.layout}>
-          <Media query="(max-width: 599px)">
+        {/* Navigation Bar */}
+          <Media query="(max-width: 800px)">
             {matches =>
               matches ? (
                 <MobileNavBar />
