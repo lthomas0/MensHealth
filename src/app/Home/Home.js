@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import Media from "react-media";
 import { withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 import DocVideos from './components/DocVideos';
 import Footer from './components/Footer';
 import NavBar from './components/NavBar';
+import MobileNavBar from './components/MobileNavBar';
 
 const styles = theme => ({
   layout: {
@@ -19,26 +21,41 @@ const styles = theme => ({
     },
   },
 });
+class Home extends PureComponent {
+  constructor(props) {
+    super(props)
+    this.setState = {
+    }
+  }
 
-function Home(props) {
-  const { classes } = props;
 
-  return (
-    <React.Fragment>
-      <CssBaseline />
-      <div className={classes.layout}>
-       <NavBar/>
-        {/* Main Content */}
-        <main>
-          {/* Video posts here */}
-          <DocVideos />
-          {/* End video posts */}
-        </main>
-      </div>
-      {/* Footer */}
+  render() {
+    const { classes } = this.props;
+    return (
+      <React.Fragment>
+        <CssBaseline />
+        <div className={classes.layout}>
+          <Media query="(max-width: 599px)">
+            {matches =>
+              matches ? (
+                <MobileNavBar />
+              ) : (
+                  <NavBar />
+                )
+            }
+          </Media>
+          {/* Main Content */}
+          <main>
+            {/* Video posts here */}
+            <DocVideos />
+            {/* End video posts */}
+          </main>
+        </div>
+        {/* Footer */}
         <Footer />
-    </React.Fragment>
-  );
+      </React.Fragment>
+    );
+  }
 }
 
 Home.propTypes = {

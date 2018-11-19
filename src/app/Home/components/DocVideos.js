@@ -25,15 +25,15 @@ function SimpleCard(props) {
   const { classes } = props;
   return (
     <Grid container spacing={40} >
-      <Grid item key={2} xs={12} md={12}>
+      <Grid item xs={12} md={12}>
         <Card >
           <Grid container>
-            <Grid item key={2} xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <div className={classes.playerWrapper}>
                 <ReactPlayer className={classes.reactPlayer} width='100%' height='100%' url='https://www.youtube.com/watch?v=BOtv4zIaN88' />
               </div>
             </Grid>
-            <Grid item key={2} xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <CardContent>
                 <Typography component="p">
                   Lorem ipsum dolor sit amet, quo vidit ipsum ubique ei, sit suas
@@ -50,15 +50,15 @@ function SimpleCard(props) {
           </Grid>
         </Card>
       </Grid>
-      <Grid item key={2} xs={12} md={12}>
+      <Grid item xs={12} md={12}>
         <Card >
           <Grid container>
-            <Grid item key={2} xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <div className={classes.playerWrapper}>
                 <ReactPlayer className={classes.reactPlayer} width='100%' height='100%' url='https://www.youtube.com/watch?v=BOtv4zIaN88' />
               </div>
             </Grid>
-            <Grid item key={2} xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <CardContent>
                 <Typography component="p">
                   Lorem ipsum dolor sit amet, quo vidit ipsum ubique ei, sit suas
@@ -75,15 +75,15 @@ function SimpleCard(props) {
           </Grid>
         </Card>
       </Grid>
-      <Grid item key={2} xs={12} md={12}>
+      <Grid item xs={12} md={12}>
         <Card >
           <Grid container>
-            <Grid item key={2} xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <div className={classes.playerWrapper}>
                 <ReactPlayer className={classes.reactPlayer} width='100%' height='100%' url='https://www.youtube.com/watch?v=BOtv4zIaN88' />
               </div>
             </Grid>
-            <Grid item key={2} xs={12} md={6}>
+            <Grid item xs={12} md={6}>
               <CardContent>
                 <Typography component="p">
                   Lorem ipsum dolor sit amet, quo vidit ipsum ubique ei, sit suas

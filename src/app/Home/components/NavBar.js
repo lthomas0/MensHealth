@@ -2,9 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import SearchIcon from '@material-ui/icons/Search';
-import Button from '@material-ui/core/Button';
+import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
 
 
@@ -21,16 +19,10 @@ const styles = theme => ({
 });
 
 const sections = [
-    'Technology',
-    'Design',
-    'Culture',
-    'Business',
-    'Politics',
-    'Opinion',
-    'Science',
-    'Health',
-    'Style',
-    'Travel',
+    'Home',
+    'Conditions and Treatments',
+    'Our Doctors',
+    'Our Clinic'
 ];
 
 function NavBar(props) {
@@ -38,26 +30,38 @@ function NavBar(props) {
     return (
         <header>
             <Toolbar className={classes.toolbarMain}>
-                <Button size="small">Subscribe</Button>
+                <Grid container >
+                    <Grid item key={1} xs={12} md={2}>
+                        <Typography
+                            component="h6"
+                            color="inherit"
+                            noWrap
+                        >
+                            Phone:(555) 555-5555
+</Typography>
+                    </Grid>
+                    <Grid item key={2} xs={12} md={4}>
+                        <Typography
+                            component="h6"
+                            color="inherit"
+                            noWrap
+                        >
+                            Address:1111 8th St., 
+                            New Orleans, LA 55555
+</Typography>
+                    </Grid>
+                </Grid>
+            </Toolbar>
+            <Toolbar variant="dense" className={classes.toolbarSecondary}>
                 <Typography
                     component="h2"
                     variant="h5"
                     color="inherit"
-                    align="center"
+                    align="left"
                     noWrap
-                    className={classes.toolbarTitle}
                 >
                     Men's Health New Orleans
 </Typography>
-                {/* <MyCalendar/> */}
-                <IconButton>
-                    <SearchIcon />
-                </IconButton>
-                <Button variant="outlined" size="small">
-                    Sign up
-</Button>
-            </Toolbar>
-            <Toolbar variant="dense" className={classes.toolbarSecondary}>
                 {sections.map(section => (
                     <Typography color="inherit" noWrap key={section}>
                         {section}
