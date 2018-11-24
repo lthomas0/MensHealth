@@ -4,7 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Toolbar from '@material-ui/core/Toolbar';
-
+import Icon from '@material-ui/core/Icon';
 
 const styles = theme => ({
     toolbarMain: {
@@ -37,7 +37,7 @@ function NavBar(props) {
                             color="inherit"
                             noWrap
                         >
-                            Phone:(555) 555-5555
+                            <Icon>phone</Icon> Phone:(555) 555-5555
 </Typography>
                     </Grid>
                     <Grid item key={2} xs={12} md={4}>
@@ -46,8 +46,7 @@ function NavBar(props) {
                             color="inherit"
                             noWrap
                         >
-                            Address:1111 8th St., 
-                            New Orleans, LA 55555
+                            <Icon>home</Icon> 1111 8th St., New Orleans, LA 55555
 </Typography>
                     </Grid>
                 </Grid>

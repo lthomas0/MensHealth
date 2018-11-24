@@ -20,7 +20,7 @@ function Footer(props) {
                 Footer
 </Typography>
             <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-                Something here to give the footer a purpose!
+                © 2018 Tulane Men's Health Clinic
 </Typography>
         </footer>
 
